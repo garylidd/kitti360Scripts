@@ -31,7 +31,7 @@ except:
 # the label tool was originally written for python 2 and pyqt4
 # in order to enable compatibility with python 3, we need
 # to fix the pyqt api to the old version that is default in py2
-import sip
+from PyQt5 import sip
 apis = ['QDate', 'QDateTime', 'QString', 'QTextStream', 'QTime', 'QUrl', 'QVariant']
 for a in apis:
     sip.setapi(a, 1)

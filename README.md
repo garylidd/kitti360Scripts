@@ -19,7 +19,7 @@ pip install git+https://github.com/autonomousvision/kitti360Scripts.git
 
 For the 2D graphical tools you additionally need to install
 ```
-sudo apt install python-tk python-qt5
+pip install tk PyQt5 
 ```
 
 We use open3D to visualize 3D point clouds and 3D bounding boxes:
