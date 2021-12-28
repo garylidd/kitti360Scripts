@@ -2,6 +2,7 @@ import os
 import numpy as np
 import re
 import yaml
+from yaml import Loader
 import sys
 from kitti360scripts.devkits.commons.loadCalibration import loadCalibrationCameraToPose
 
@@ -15,7 +16,7 @@ def readYAMLFile(fileName):
         yamlFileOut = fin.read()
         myRe = re.compile(r":([^ ])")   # Add space after ":", if it doesn't exist. Python yaml requirement
         yamlFileOut = myRe.sub(r': \1', yamlFileOut)
-        ret = yaml.load(yamlFileOut)
+        ret = yaml.load(yamlFileOut, Loader=Loader)
     return ret
 
 class Camera:
